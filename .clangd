@@ -1,0 +1,5 @@
+CompileFlags:
+    Add: [-O0, -std=gnu++23, -Wall, -stdlib=libstdc++]  
+Diagnostics:
+  UnusedIncludes: None
+  Suppress: unknown-pragmas
