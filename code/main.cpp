@@ -20,17 +20,32 @@
 #include <unordered_set>
 #include <map>
 #include <unordered_map>
+#include <queue>
 
 #include <algorithm>
 #include <ranges>
 #include <numeric>
 #include <numbers>
 #include <bit>
+#include <random>
 
-
-#define FAST_IO
+#ifndef TO_FILE
 // #define TO_FILE
+#define IN_FILE "input.txt"
+#define OUT_FILE "output.txt"
+#endif
+// #undef TO_FILE
+#define FAST_IO
 #define ONE_TEST
+
+namespace stdn = std::numbers;
+namespace stdc = std::chrono;
+namespace stdr = std::ranges;
+namespace stdv = std::views;
+
+using i64 = int64_t;
+using u64 = uint64_t;
+using f64 = double_t;
 
 void prepare() {}
 
@@ -42,9 +57,9 @@ int main() {
     std::cin.tie(nullptr);
     #endif
 
-    #ifdef TO_FILE
-    std::freopen("input.txt", "r", stdin);
-    std::freopen("output.txt", "w", stdout);
+    #ifdef TO_FILE 
+    std::freopen(IN_FILE, "r", stdin);
+    std::freopen(OUT_FILE, "w", stdout);
     #endif
 
     prepare();

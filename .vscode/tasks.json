@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-DTO_FILE",
+                "-D'IN_FILE=\"${fileDirname}/input.txt\"'",
+                "-D'OUT_FILE=\"${fileDirname}/output.txt\"'",
+                "-O0",
+                "-std=gnu++23",
+                "${file}",
+                "-o", "${fileDirname}/${fileBasenameNoExtension}",
+                "-Wall",
+            ],
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "rm",
+            "args": ["${fileDirname}/${fileBasenameNoExtension}"]
+        }
+    ]
+}

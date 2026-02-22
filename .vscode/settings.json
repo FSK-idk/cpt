@@ -1,12 +1,21 @@
 {
+    "editor.inlayHints.enabled": "off",
+    "editor.formatOnSave": false,
     "code-runner.runInTerminal": true,
     "code-runner.ignoreSelection": true,
     "code-runner.executorMap": {
-        "cpp": "clear && cd $dir && g++ -DTO_FILE=1 -O0 -std=gnu++23 $fileName -o $fileNameWithoutExt -Wall && ./$fileNameWithoutExt && rm $fileNameWithoutExt",
+        "cpp": "clear && cd $dir && g++ -g -DTO_FILE -D'IN_FILE=\"input.txt\"' -D'OUT_FILE=\"output.txt\"' -O0 -std=gnu++23 $fileName -o $fileNameWithoutExt -Wall && ./$fileNameWithoutExt && rm $fileNameWithoutExt",
     },
     "clangd.arguments": [
         "-header-insertion=never",
     ],
-    "editor.inlayHints.enabled": "off",
-    "editor.formatOnSave": false,
+    "lldb.consoleMode": "evaluate",
+    "lldb.dereferencePointers": false,
+    "debug.focusEditorOnBreak": false,
+    "debug.openDebug": "openOnDebugBreak",
+    "codesnap.shutterAction" :"copy",
+    "codesnap.target": "window",
+    "codesnap.showWindowControls": false,
+    "codesnap.showWindowTitle": false,
+    "codesnap.roundedCorners": false,
 }

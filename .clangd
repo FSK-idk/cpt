@@ -1,5 +1,7 @@
 CompileFlags:
     Add: [-O0, -std=gnu++23, -Wall, -stdlib=libstdc++]  
 Diagnostics:
+  ClangTidy:
+    Remove: [misc-unused-alias-decls]
   UnusedIncludes: None
   Suppress: unknown-pragmas
